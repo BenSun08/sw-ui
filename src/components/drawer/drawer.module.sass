@@ -1,0 +1,28 @@
+$sideWidth: 240px
+    
+.mask
+  position: fixed
+  left: 0
+  top: 0
+  width: 100vw
+  height: 100vh
+  background-color: rgba(102, 100, 100, 0.5)
+  z-index: 100
+.drawer
+  position: fixed
+  left: -$sideWidth
+  top: 0
+  width: $sideWidth
+  height: 100vh
+  background-color: #ffffff
+  transition: left .2s ease-out 
+  z-index: 100
+
+.hide
+  visibility: hidden
+.show
+  visibility: visible
+.slide-in
+  left: 0
+.slide-out
+  left: -$sideWidth
