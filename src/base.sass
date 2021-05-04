@@ -1,0 +1,58 @@
+// #372963,#100D23,#100d23,#00FF9C,#100D23,#c592ff,#00FF9C,#ff4081
+// #372963 #372963 #c592ff#c592ff #100D23#100D23 #00FF9C#00FF9C #FF4081#FF4081
+// theme-color
+// to see detail implementation,
+// look up sass-loader configuration in craco.config.file
+// under the root directory
+$theme-colors: theme("colors")
+$breakpoints: theme("breakpoints")
+// default
+*
+  box-sizing: border-box
+body 
+  background-color: #1e1d45
+  font-size: 75%
+html>body
+  font-size: 12px
+div,p
+  line-height: 1.5em 
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,p,blockquote,th,td
+  margin: 0
+  padding: 0
+
+// flex
+.flex
+  display: flex
+.space-between
+  justify-content: space-between
+.justify-center
+  justify-content: center
+.align-center
+  align-items: center
+// toggle
+.show
+  visibility: visible
+.hide
+  visibility: hidden
+.block
+  display: block
+.remove
+  display: none
+
+// margin and padding
+$baseSize: 8px
+$positionMap: ('l': left, 'r': right, 't': top, 'b': bottom)
+$boxMap: ('m': margin, 'p': padding)
+@for $i from 1 through 10
+  @each $boxLabel, $box in $boxMap
+    .#{$boxLabel}-#{$i}x
+      #{$box}: $i * $baseSize
+    .#{$boxLabel}-#{$i}x-v
+      #{$box}-top: $i * $baseSize
+      #{$box}-bottom: $i * $baseSize
+    .#{$boxLabel}-#{$i}x-h
+      #{$box}-left: $i * $baseSize
+      #{$box}-right: $i * $baseSize
+    @each $posLabel, $pos in $positionMap
+      .#{$boxLabel}-#{$i}x-#{$posLabel}
+        #{$box}-#{$pos}: $i * $baseSize !important
