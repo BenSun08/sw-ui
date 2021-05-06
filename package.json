@@ -2,10 +2,11 @@
   "name": "sw-ui",
   "version": "1.0.0",
   "description": "An UI Library",
-  "main": "index.js",
+  "main": "./src/components/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "webpack",
+    "prepublish": "webpack"
   },
   "keywords": [],
   "author": "SanWang",
