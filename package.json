@@ -1,21 +1,27 @@
 {
   "name": "@sanwang/sw-ui",
-  "version": "1.0.1",
-  "description": "An UI Library",
-  "main": "./src/components/index.js",
+  "version": "1.0.2",
+  "description": "An Web UI Library",
+  "browser": "./src/components/index.js",
+  "module": "./src/components/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "prepublish": "webpack"
+    "prepare": "webpack"
   },
-  "keywords": [],
+  "keywords": [
+    "react",
+    "react-component",
+    "sw-ui"
+  ],
   "author": "SanWang",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.14.0",
     "@babel/preset-env": "^7.14.1",
     "@babel/preset-react": "^7.13.13",
     "@babel/preset-typescript": "^7.13.0",
+    "@emotion/react": "^11.1.5",
+    "@emotion/styled": "^11.3.0",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.2.4",
     "node-sass-utils": "^1.1.3",
@@ -29,8 +35,22 @@
     "webpack": "^5.36.2",
     "webpack-cli": "^4.6.0"
   },
-  "dependencies": {
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0",
     "@emotion/react": "^11.1.5",
     "@emotion/styled": "^11.3.0"
+  },
+  "peerDependenciesMeta": {
+    "@emotion/react": {
+      "optional": true
+    },
+    "@emotion/styled": {
+      "optional": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BenSun08/sw-ui.git"
   }
 }
